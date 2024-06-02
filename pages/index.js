@@ -2,6 +2,7 @@ import { Stack } from '@mui/material'
 import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import ROCKET from '../assets/btcrocket.png'
+import Link from 'next/link'
 import BTC from '../assets/btc.png'
 import LOGO from '../assets/logo.png'
 import ETH from '../assets/eth.png'
@@ -27,7 +28,7 @@ function Home() {
         }}
       >
         <Stack className='header' direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
-          <Image src={LOGO} width={140} height={70} style={{ padding: 8 }} />
+          <Image src={LOGO} width={70} height={40} style={{ padding: 8 }} />
 
 
         </Stack>
@@ -45,13 +46,17 @@ function Home() {
 
         </Stack>
         <Stack direction="row" spacing={5} alignItems={"center"} justifyContent={"start"} sx={{ paddingLeft:'10%'}}>
-            <motion.div className='btn' whileHover={{ y:-4 }} whileTap={{ y: 5 }}>
+            <Link href={"https://startrading.cc/auth/user/login"}>
+               <motion.div className='btn' whileHover={{ y:-4 }} whileTap={{ y: 5 }}>
               <p>LOGIN</p>
             </motion.div>
-
+            </Link>
+         
+            <Link href={"https://startrading.cc/auth/user/register"}>
             <motion.div className='btnx' whileHover={{ y:-4 }} whileTap={{ y: 5 }}>
               <p>GET STARTED</p>
             </motion.div>
+            </Link>
         </Stack>
       </Stack>
     </main>

@@ -22,7 +22,7 @@ body {
 }
 
 .header{
-  background-color: #ffffffb6;
+  background-color: #ffffffe6;
   width: auto;
   height: 70px;
 }
@@ -83,6 +83,7 @@ body {
   font-weight: 500;
   color: #7CAFC4;
 }
+/*mobile*/
 @media screen and (max-width: 830px) {
     .header{
       padding: 8px;
@@ -90,6 +91,16 @@ body {
     }
     .rocket{
       display: none;
+    }
+
+    .panding {
+      color: #706F6F;
+      font-weight: 600;
+      font-size: 17px;
+    }
+
+    .tanding {
+      color: #044389;
     }
 }
 
