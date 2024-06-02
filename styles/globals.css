@@ -32,7 +32,7 @@ body {
     font-weight: 700;
     font-family: "Poppins",sans-serif;
     color: rgb(255, 255, 255);
-    padding: 8px;
+    padding: 4px;
 }
 
 .panding {
@@ -40,8 +40,48 @@ body {
   font-weight: 400;
   font-family: "Poppins",sans-serif;
   color: whitesmoke;
-  padding: 12px;
+  padding: 8px;
   
+}
+
+.btn {
+  width: 120px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgb(26, 95, 5);
+  background-color: #9CFFFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn p {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: rgb(26, 95, 5);
+}
+
+.btnx {
+  width: 120px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #9CFFFA;
+  background-color:#044389;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btnx p {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: #7CAFC4;
 }
 @media screen and (max-width: 830px) {
     .header{

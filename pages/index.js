@@ -5,6 +5,7 @@ import ROCKET from '../assets/btcrocket.png'
 import BTC from '../assets/btc.png'
 import LOGO from '../assets/logo.png'
 import ETH from '../assets/eth.png'
+import { motion } from 'framer-motion'
 import Landing from '../assets/landing.jpg';
 
 function Home() {
@@ -32,7 +33,7 @@ function Home() {
         </Stack>
 
         <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"}>
-          <Stack direction={"column"} sx={{ padding:'8px'}}>
+          <Stack direction={"column"} sx={{ padding:'8px'}} justifyContent={"center"} spacing={2}>
             <p className='tanding'>PROFESSIONAL CFD
               TRADING SYSTEM
             </p>
@@ -42,6 +43,15 @@ function Home() {
             <Image src={ROCKET} width={440} height={380} alt="rocket" />
           </div>
 
+        </Stack>
+        <Stack direction="row" spacing={5} alignItems={"center"} justifyContent={"start"} sx={{ paddingLeft:'10%'}}>
+            <motion.div className='btn' whileHover={{ y:-4 }} whileTap={{ y: 5 }}>
+              <p>LOGIN</p>
+            </motion.div>
+
+            <motion.div className='btnx' whileHover={{ y:-4 }} whileTap={{ y: 5 }}>
+              <p>GET STARTED</p>
+            </motion.div>
         </Stack>
       </Stack>
     </main>
