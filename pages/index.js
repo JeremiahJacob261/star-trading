@@ -5,6 +5,7 @@ import ROCKET from '../assets/btcrocket.png'
 import Link from 'next/link'
 import BTC from '../assets/btc.png'
 import LOGO from '../assets/logo.png'
+import Third from '../assets/third.png';
 import CMobile from '../assets/mobile.png'
 import ETH from '../assets/eth.png'
 import Head from 'next/head'
@@ -79,6 +80,17 @@ function Home() {
         </Stack>
         <Image src={CMobile} alt="crypto for mobile" width={400} height={350} className='nosee'/>
       </Stack>
+
+      <Stack direction="row" spacing={1} alignItems="center" style={{ width: 'auto', minHeight: '600px',  padding: '12px', background: 'whitesmoke' }}>
+        <Stack direction="column">
+        <Image src={Third} alt="crypto for mobile" width={340} height={350} className='see'/>
+          <p className='tanding2'>MANAGED PORTFOLIOS</p>
+          <p className='panding2'> Our dedicated portfolio managers will expertly make investment decisions that are beneficial to you. Your needs, goals, risk tolerance and asset size have top consideration by the experts.</p>
+          <p className='danding2'>Stocks ETFs Bonds Mutual Funds Futures Advanced Products</p>
+        </Stack>
+        <Image src={Third} alt="crypto for mobile" width={400} height={350} className='nosee'/>
+      </Stack>
+
     </main>
   )
 }
