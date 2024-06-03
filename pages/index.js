@@ -11,7 +11,7 @@ import ETH from '../assets/eth.png'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Landing from '../assets/landing.jpg';
-
+import Footer from './footer.js'
 function Home() {
 
 
@@ -90,7 +90,7 @@ function Home() {
         </Stack>
         <Image src={Third} alt="crypto for mobile" width={400} height={350} className='nosee'/>
       </Stack>
-
+<Footer/>
     </main>
   )
 }
