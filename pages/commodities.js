@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderDraw from '../components/HeaderDraw';
+import HeaderDraw from './components/HeaderDraw';
 export default function Commodities() {
     return(
             <HeaderDraw>

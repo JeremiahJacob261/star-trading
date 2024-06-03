@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {Link} from 'react-router-dom';
 import Headc from '../img/touch.png'
-import HeaderDraw from '../components/HeaderDraw';
-import Ready from '../components/ready';
+import HeaderDraw from './components/HeaderDraw';
+import Ready from './components/ready';
 export default function Stocks() {
     return(
             <HeaderDraw>
