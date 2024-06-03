@@ -19,11 +19,11 @@ export default function Stocks() {
                 <p className='first-title'>Unrivalled Opportunities</p>
                 <p className='first-p'>To Trade the Top-performing Stocks in the Global Stock Markets.</p>
                 <div className="btn-case">
-              <Link href="/register" style={{ textDecoration:'none',color:'white'}}>
+              <Link href={"https://startrading.cc/auth/user/register"} style={{ textDecoration:'none',color:'white'}}>
                 <motion.div className="btn-dark" whileHover={{ y: -10 }} whileTap={{ scale: 0.8 }}>Open Account</motion.div>
                 </Link>
 
-              <Link href="/register" style={{ textDecoration:'none',color:'white'}}>
+              <Link href={"https://startrading.cc/auth/user/register"} style={{ textDecoration:'none',color:'white'}}>
                 <motion.div className="btn-light" whileHover={{ y: -10 }} whileTap={{ scale: 0.8 }}>Start Trading</motion.div>
                 </Link>
                 </div>
