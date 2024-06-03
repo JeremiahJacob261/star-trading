@@ -126,6 +126,11 @@ text-align: center;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: start;
+  background: rgb(65,105,157);
+  background: -moz-linear-gradient(139deg, rgba(65,105,157,1) 0%, rgba(55,142,36,1) 100%);
+  background: -webkit-linear-gradient(139deg, rgba(65,105,157,1) 0%, rgba(55,142,36,1) 100%);
+  background: linear-gradient(139deg, rgba(65,105,157,1) 0%, rgba(55,142,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41699d",endColorstr="#378e24",GradientType=1);
 }
 
 .footer1 {
