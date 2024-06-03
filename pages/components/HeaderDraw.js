@@ -55,7 +55,10 @@ export default function HeaderDraw({ children }) {
 
 
             </Stack>
-            {children}
+            <div style={{ paddingTop:'100px'}}>
+                  {children}
+            </div>
+          
             <Ready />
             <Footer />
         </main>

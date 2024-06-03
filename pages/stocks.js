@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Headc from '../img/touch.png'
+import Headc from '../assets/touch.png'
 import HeaderDraw from './components/HeaderDraw';
 import Ready from './components/ready';
+import Image from 'next/image';
 export default function Stocks() {
     return(
             <HeaderDraw>
             <div className="App"
-        style={{
-          backgroundImage: `url(${Headc})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
-        }}>
+       >
+        <div style={{ width:'100vw', height:'100vh', position:'fixed',zIndex:'-99'}}>
+          <Image src={Headc } alt="ready"/>
+        </div>
                 <div className='stocker'>
                 <p className='first-title'>Unrivalled Opportunities</p>
                 <p className='first-p'>To Trade the Top-performing Stocks in the Global Stock Markets.</p>
