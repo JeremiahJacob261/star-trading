@@ -1,7 +1,7 @@
 import Link from 'next/link'
 function Linker({children} ){
     return(
-      <Link className="linkers" style={{color:'white'}} href={'/'+children.replace(" ",'').toLowerCase()}>
+      <Link className="linkers" style={{color:'white'}} href={'/'+children.toString().replace(" ",'').toLowerCase()}>
         {children}
         </Link>
     )
