@@ -22,14 +22,43 @@ function Home() {
           Star Trading
         </title>
       </Head>
-      <div style={{ width: '100vw', maxHeight: '600px', position: 'fixed', zIndex: -10 }}>
-        <Image src={Landing} />
-      </div>
+
 
       <Stack className='header' direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
-        <Link href="/">
-          <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
-        </Link>
+        <div className='header-mobile'>
+          <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} style={{ width: '100%' }}>
+            <Icon icon="gg:menu-round" width="35" height="35" style={{ color: "#32E875" }} />
+            <Link href="/">
+              <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
+            </Link>
+
+            <Icon icon="ion:search" width="24" height="24" style={{ color: "#a3a3a3" }} />
+          </Stack>
+        </div>
+
+        <div className='header-desktop'>
+          <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} style={{ width: '100%' }}>
+            <Link href="/">
+              <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
+            </Link>
+
+            <Stack direction="row" spacing={2} alignItems={"center"} justifyContent={"center"}>
+
+            </Stack>
+
+            <Stack direction="row" spacing={2} alignItems={"center"} justifyContent={"center"}>
+              <div className='sm-outlined'>
+                <p>LOGIN</p>
+              </div>
+
+              <div className='sm-contained'>
+                <p>REGISTER</p>
+              </div>
+            </Stack>
+
+          </Stack>
+        </div>
+
 
       </Stack>
       <Stack direction={"column"}
@@ -47,7 +76,11 @@ function Home() {
 
           <Image src={BTC} width={200} height={200} alt='btc' style={{ position: 'absolute', top: '200px', right: '20px', zIndex: -1 }} />
           <Image src={ETH} width={200} height={200} alt='btc' style={{ position: 'absolute', bottom: '-50px', left: '20px', zIndex: -1 }} />
-
+          <div style={{ width: 'auto', position: 'fixed', zIndex: -2 }}>
+            <Image src={Landing}
+              style={{ zIndex: -2 }}
+            />
+          </div>
           <Stack direction={"column"} sx={{ padding: '8px' }} justifyContent={"center"} spacing={2}>
             <p className='tanding'>PROFESSIONAL CFD
               TRADING SYSTEM
