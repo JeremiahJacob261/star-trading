@@ -27,9 +27,9 @@ function Home() {
       </div>
 
       <Stack className='header' direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
-      <Link href="/">
-        <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
-</Link>
+        <Link href="/">
+          <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
+        </Link>
 
       </Stack>
       <Stack direction={"column"}
@@ -79,26 +79,29 @@ function Home() {
           <p className='tanding2'>Mobile-optimized trading experience</p>
           <p className='panding2'> Never miss out on an opportunity with our mobile interface! Whenever you are not at your desktop or laptop computer, our Platform got you covered.</p>
         </Stack>
-        <Image src={CMobile} alt="crypto for mobile" width={400} height={350} className='nosee'/>
+        <Image src={CMobile} alt="crypto for mobile" width={400} height={350} className='nosee' />
       </Stack>
 
       <Stack direction="row" spacing={1} alignItems="center" style={{ width: 'auto', minHeight: '400px', padding: '12px', background: '#0e468f' }}>
-        <Stack direction="column"  alignItems="center" justifyContent={"center"}>
-          <p style={{ color:'white',fontSize:'17px',textAlign:'center' }}>Are You New To Trading ?</p>
-          <p style={{ color:'white',fontSize:'20px',textAlign:'center' }}> Never miss out on an opportunity with our best trading tutors! Whenever you are not at good with trading or have a little knowlegde, our Platform got you covered.</p>
+        <Stack direction="column" alignItems="center" justifyContent={"center"}>
+          <p style={{ color: 'white', fontSize: '17px', textAlign: 'center' }} className='georgia'>Are You New To Trading ?</p>
+          <p style={{ color: 'white', fontSize: '20px', textAlign: 'center' }}> Never miss out on an opportunity with our best trading tutors! Whenever you are not at good with trading or have a little knowlegde, our Platform got you covered.</p>
+          <Link style={{ textDecoration: 'none' }} href={"https://startrading.cc/auth/user/register"}>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.8 }} className='outlined-transparent'><p>LEARN WITH US</p></motion.div>
+          </Link>
         </Stack>
       </Stack>
 
-      <Stack direction="row" spacing={1} alignItems="center" style={{ width: 'auto', minHeight: '600px',  padding: '12px', background: 'whitesmoke' }}>
+      <Stack direction="row" spacing={1} alignItems="center" style={{ width: 'auto', minHeight: '600px', padding: '12px', background: 'whitesmoke' }}>
         <Stack direction="column">
-        <Image src={Third} alt="crypto for mobile" width={340} height={350} className='see'/>
+          <Image src={Third} alt="crypto for mobile" width={340} height={350} className='see' />
           <p className='tanding2'>MANAGED PORTFOLIOS</p>
           <p className='panding2'> Our dedicated portfolio managers will expertly make investment decisions that are beneficial to you. Your needs, goals, risk tolerance and asset size have top consideration by the experts.</p>
           <p className='danding2'>Stocks ETFs Bonds Mutual Funds Futures Advanced Products</p>
         </Stack>
-        <Image src={Third} alt="crypto for mobile" width={400} height={350} className='nosee'/>
+        <Image src={Third} alt="crypto for mobile" width={400} height={350} className='nosee' />
       </Stack>
-<Footer/>
+      <Footer />
     </main>
   )
 }
