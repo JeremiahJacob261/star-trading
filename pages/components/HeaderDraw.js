@@ -4,11 +4,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import SearchIcon from '@mui/icons-material/Search';
-
+import Image from 'next/image'
 import Ready from './ready';
-import Logo from '../../assets/logo.png';
+import LOGO from '../../assets/logo.png';
 import Footer from '../footer';
-import  Link from "next/link";
+import Link from "next/link";
 import { useState, useEffect } from 'react';
 export default function HeaderDraw({ children }) {
     const [open, setOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function HeaderDraw({ children }) {
     const OFFERS = ['Invest in Bitcoin', 'Invest in Tesla'];
     useEffect(() => {
         console.log(MARKETS);
-        
+
     }, [open]);
     const dropdownData = {
         MARKETS: { items: ['Stocks', 'ETFs', 'Bonds', 'Mutual Funds', 'Futures'], isVisible: false },
@@ -42,126 +42,22 @@ export default function HeaderDraw({ children }) {
     };
     function Linker({ children }) {
         return (
-            <Link className="linkers" to={'/' + children.replace(' ', '').replace(' ', '').toLowerCase()}>
+            <Link className="linkers" href={'/' + children.replace(' ', '').replace(' ', '').toLowerCase()}>
                 <p style={{ width: '100%', padding: 0, height: '50px', margin: 0 }}>{children}</p>
             </Link>
         )
     }
 
     return (
-        <div>
-            <Drawer open={open} onClose={handleDrawer}>
-                <div className="drawerdiv">
-                    <Stack direction="column" spacing={2}>
-                        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                            <OutlinedInput
-                                id="outlined-adornment-weight"
-                                endAdornment={<InputAdornment position="end">
-                                    <SearchIcon />
-                                </InputAdornment>}
-                                label="Search"
-                                aria-describedby="outlined-weight-helper-text"
-
-                            />
-                            <FormHelperText id="outlined-weight-helper-text">Search</FormHelperText>
-                        </FormControl>
-
-                        <Divider />
-                        <Link to='/' className='linkers'>
-                            <div className="pagelnk">
-                                <p className="top-p">HOME</p>
-                            </div>
-                        </Link>
-                        {Object.keys(dropdownData).map(dropdownKey => (
-                            <div key={dropdownKey} onMouseEnter={() => handleMouseEnter(dropdownKey)} onMouseLeave={() => handleMouseLeave(dropdownKey)}>
-
-                                <div className="pagelnk">
-                                    <p className="top-p">{dropdownKey}</p>
-                                    <KeyboardArrowRightIcon color="grey" sx={{ color: 'grey' }} />
-                                </div>
-                                {dropdownVisibility[dropdownKey].isVisible && (
-                                    <ul className="dropdown">
-                                        {dropdownData[dropdownKey].items.map((item, index) => (
-                                            <li key={index}><Linker>{item}</Linker></li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                        ))}
-                        <Link to="/login">
-                            <div className="top-btn-dark">
-                                <Link to="/login" style={{ textDecoration: 'none', color: 'white' }}>
-                                    <p className="">LOGIN</p>
-                                </Link>
-                            </div>
-                        </Link>
-                        <Link to="/register">
-                            <div className="top-btn-light">
-                                <Link to="/register" style={{ textDecoration: 'none', color: 'white' }}>
-                                    <p className="top-p">REGISTER</p>
-                                </Link>
-                            </div>
-                        </Link>
-
-                    </Stack>
-                </div>
-            </Drawer>
+        <main className='main'>
+            <Stack className='header' direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+                <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
 
 
-            <div className="top-nav">
-                <div className="menu">
-                    <MenuIcon color="white" sx={{ color: 'white', width: '25px' }} onClick={handleDrawer} />
-                </div>
-
-                <Link to='/'>
-                    <img src={Logo} alt="logo" className="logo_home" />
-                </Link>
-                <div className="top-pages">
-                    <Stack direction="row" spacing={2}>
-                        {Object.keys(dropdownData).map(dropdownKey => (
-                            <div key={dropdownKey} onMouseEnter={() => handleMouseEnter(dropdownKey)} onMouseLeave={() => handleMouseLeave(dropdownKey)}>
-
-                                <div className="pagelnk">
-                                    <p className="top-p">{dropdownKey}</p>
-                                    <KeyboardArrowDownIcon color="white" sx={{ color: 'white' }} />
-                                </div>
-                                <div className="floating">
-                                    {dropdownVisibility[dropdownKey].isVisible && (
-                                        <ul className="dropdown">
-                                            {dropdownData[dropdownKey].items.map((item, index) => (
-                                                <li key={index}><Linker>{item}</Linker></li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-
-
-                            </div>
-                        ))}
-
-                        <Link to="/login">
-                            <div className="top-btn-dark">
-                                <p className="">LOGIN</p>
-                            </div>
-                        </Link>
-                        <Link to="/register">
-                            <div className="top-btn-light">
-                                <p className="top-p">REGISTER</p>
-                            </div>
-                        </Link>
-                    </Stack>
-                </div>
-
-                <div className="menu">
-                    <SearchIcon color="white" sx={{ color: 'grey', width: '25px' }} />
-                </div>
-            </div>
-            <div className='AppConver'>
-
-                {children}
-            </div>
+            </Stack>
+            {children}
             <Ready />
             <Footer />
-        </div>
+        </main>
     )
 }
