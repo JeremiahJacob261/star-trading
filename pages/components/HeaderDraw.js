@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image'
 import Ready from './ready';
 import LOGO from '../../assets/logo.png';
+import Head from 'next/head';
 import Footer from '../footer';
 import Link from "next/link";
 import { useState, useEffect } from 'react';
@@ -50,9 +51,15 @@ export default function HeaderDraw({ children }) {
 
     return (
         <main className='main'>
+            <Head>
+                <title>
+                    Star Trading
+                </title>
+            </Head>
             <Stack className='header' direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+            <Link href="/">
                 <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
-
+            </Link>
 
             </Stack>
             <div style={{ paddingTop:'100px'}}>

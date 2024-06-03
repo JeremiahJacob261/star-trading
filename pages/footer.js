@@ -3,7 +3,7 @@ import Logo from '../assets/logo.png';
 import { Stack} from '@mui/material'
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 export default function Footer() {
     const MARKETS = [
         "Crypto Trading",
@@ -39,7 +39,9 @@ export default function Footer() {
     return (
         <div className="footer">
             <div  className="footer1">
+                <Link href="/">
                 <Image src={Logo} width={120} height={50} alt="logo" className="logo_home" />
+                </Link>
                 <p className="footer-title">Star Trading</p>
             </div>
             <div className="footer1">

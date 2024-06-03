@@ -27,8 +27,9 @@ function Home() {
       </div>
 
       <Stack className='header' direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+      <Link href="/">
         <Image src={LOGO} width={110} height={40} style={{ padding: 8 }} />
-
+</Link>
 
       </Stack>
       <Stack direction={"column"}
@@ -79,6 +80,13 @@ function Home() {
           <p className='panding2'> Never miss out on an opportunity with our mobile interface! Whenever you are not at your desktop or laptop computer, our Platform got you covered.</p>
         </Stack>
         <Image src={CMobile} alt="crypto for mobile" width={400} height={350} className='nosee'/>
+      </Stack>
+
+      <Stack direction="row" spacing={1} alignItems="center" style={{ width: 'auto', minHeight: '400px', padding: '12px', background: '#0e468f' }}>
+        <Stack direction="column"  alignItems="center" justifyContent={"center"}>
+          <p style={{ color:'white',fontSize:'17px',textAlign:'center' }}>Are You New To Trading ?</p>
+          <p style={{ color:'white',fontSize:'20px',textAlign:'center' }}> Never miss out on an opportunity with our best trading tutors! Whenever you are not at good with trading or have a little knowlegde, our Platform got you covered.</p>
+        </Stack>
       </Stack>
 
       <Stack direction="row" spacing={1} alignItems="center" style={{ width: 'auto', minHeight: '600px',  padding: '12px', background: 'whitesmoke' }}>

@@ -7,12 +7,14 @@ import Ready from './components/ready';
 import Image from 'next/image';
 export default function Stocks() {
     return(
+      
+    <main className='main'>
             <HeaderDraw>
             <div className="App"
        >
-        <div style={{ width:'100vw', height:'100vh', position:'fixed',zIndex:'-99'}}>
-          <Image src={Headc } alt="ready"/>
-        </div>
+        <div style={{ width: '100vw', maxHeight: '600px', position: 'fixed', zIndex: -10 }}>
+        <Image src={Headc} />
+      </div>
                 <div className='stocker'>
                 <p className='first-title'>Unrivalled Opportunities</p>
                 <p className='first-p'>To Trade the Top-performing Stocks in the Global Stock Markets.</p>
@@ -28,5 +30,6 @@ export default function Stocks() {
                 </div>
             </div>
                 </HeaderDraw>
+                </main>
     )
 }
